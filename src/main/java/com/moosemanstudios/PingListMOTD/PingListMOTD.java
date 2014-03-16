@@ -1,0 +1,55 @@
+package com.moosemanstudios.PingListMOTD;
+
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.mcstats.Metrics;
+
+import java.io.IOException;
+import java.util.logging.Logger;
+
+/**
+ * Created by Chris on 3/15/14.
+ */
+public class PingListMOTD extends JavaPlugin{
+	public String motd;
+	public String prefix = "[PingListMOTD] ";
+	public Logger log = Logger.getLogger("minecraft");
+
+	@Override
+	public void onEnable() {
+		loadConfig();
+
+		// enable metrics
+		try {
+			Metrics metrics= new Metrics(this);
+			metrics.start();
+		} catch (IOException e) {
+			log.info(prefix  + "Unable to start metrics tracking");
+		}
+
+		// register the command executor
+		getCommand("pinglist").setExecutor(new PingListCommandExecutor(this));
+
+		// register the event listener
+		Bukkit.getPluginManager().registerEvents(new PingListListener(this), this);
+	}
+
+	@Override
+	public void onDisable() {
+		Logger.getLogger("minecraft").info(prefix + " is now disabled");
+	}
+
+	public void loadConfig() {
+		// firstly reload from disk
+		reloadConfig();
+
+		// misc settings
+		if (!getConfig().contains("debug")) getConfig().set("debug", true);
+
+		// motd
+		if (!getConfig().contains("server-list-motd")) getConfig().set("server-list-motd", "&6PingListMOTD &3by &9moose517");
+
+		// save back out
+		saveConfig();
+	}
+}

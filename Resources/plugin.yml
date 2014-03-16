@@ -1,0 +1,13 @@
+name: ${name}
+description: ${description}
+version: ${project.version}
+main: com.moosemanstudios.PingListMOTD.PingListMOTD
+
+commands:
+    pinglist:
+        description: general command
+
+
+permissions:
+    pinglist.admin:
+        description: all inclusive permission
