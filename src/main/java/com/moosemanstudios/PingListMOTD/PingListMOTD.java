@@ -51,5 +51,7 @@ public class PingListMOTD extends JavaPlugin{
 
 		// save back out
 		saveConfig();
+
+		motd = getConfig().getString("server-list-motd");
 	}
 }
