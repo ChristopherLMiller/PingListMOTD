@@ -6,7 +6,7 @@
 
     <groupId>com.moosemanstudios</groupId>
     <artifactId>pinglistmotd</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>PingListMOTD</name>
     <url>http://moosemanstudios.com</url>
     <description>Easy to configure ping list MOTD</description>
