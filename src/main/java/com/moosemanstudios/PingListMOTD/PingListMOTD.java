@@ -1,16 +1,15 @@
 package com.moosemanstudios.PingListMOTD;
 
+import org.bstats.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.Metrics;
 
-import java.io.IOException;
 import java.util.logging.Logger;
 
 /**
  * Created by Chris on 3/15/14.
  */
-public class PingListMOTD extends JavaPlugin{
+public class PingListMOTD extends JavaPlugin {
 	public String motd;
 	public String prefix = "[PingListMOTD] ";
 	public Logger log = Logger.getLogger("minecraft");
@@ -20,12 +19,8 @@ public class PingListMOTD extends JavaPlugin{
 		loadConfig();
 
 		// enable metrics
-		try {
-			Metrics metrics= new Metrics(this);
-			metrics.start();
-		} catch (IOException e) {
-			log.info(prefix  + "Unable to start metrics tracking");
-		}
+		Metrics metrics= new Metrics(this);
+
 
 		// register the command executor
 		getCommand("pinglist").setExecutor(new PingListCommandExecutor(this));
