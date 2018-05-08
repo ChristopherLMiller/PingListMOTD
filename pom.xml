@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Project information -->
-    <groupId>com.moosemanstudios</groupId>
+    <groupId>me.christopherleemiller</groupId>
     <artifactId>pinglistmotd</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
     <name>PingListMOTD</name>
-    <url>http://moosemanstudios.com</url>
+    <url>https://christopherleemiller.me</url>
     <description>Easy to configure ping list MOTD</description>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serverVersion>1.12-R0.1-SNAPSHOT</serverVersion>
+        <serverVersion>1.12.2-R0.1-SNAPSHOT</serverVersion>
     </properties>
 
     <repositories>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 
@@ -94,7 +94,7 @@
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <!-- Replace this with your package! -->
-                            <shadedPattern>com.moosemanstudios.PingListMOTD</shadedPattern>
+                            <shadedPattern>me.christopherleemiller.PingListMOTD</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -125,4 +125,15 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+      <snapshotRepository>
+        <id>nexus-snapshot</id>
+        <url>https://nexus.christopherleemiller.me/repository/maven-snapshots/</url>
+      </snapshotRepository>
+      <repository>
+        <id>nexus-releases</id>
+        <url>https://nexus.christopherleemiller.me/repository/maven-releases</url>
+      </repository>
+    </distributionManagement>
 </project>

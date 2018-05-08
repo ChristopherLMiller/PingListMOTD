@@ -1,4 +1,4 @@
-package com.moosemanstudios.PingListMOTD;
+package me.christopherleemiller.PingListMOTD;
 
 import org.bstats.Metrics;
 import org.bukkit.Bukkit;

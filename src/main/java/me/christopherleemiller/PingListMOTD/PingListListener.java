@@ -1,4 +1,4 @@
-package com.moosemanstudios.PingListMOTD;
+package me.christopherleemiller.PingListMOTD;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
