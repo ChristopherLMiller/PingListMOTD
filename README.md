@@ -10,7 +10,7 @@
 <p align="center">Discord - Plugin Help: https://discord.gg/AVVhUXU</p>
 
 ### About PingListMOTD
-PingListMOTD is an easy to use plugin for managaing what is shown in multiplayer server listing. One command to set any message you want including the ability to have multi-line messages. Colors are also supported.
+PingListMOTD is an easy to use plugin for managing what is shown in multiplayer server listing. One command to set any message you want including the ability to have multi-line messages. Colors are also supported.
 
 ### Features
 multi-line messages using the '^' (caret) to mark new line
@@ -36,5 +36,6 @@ Stats tracking - only for informational purprose, more info below
 ### bStats Metrics
 PingListMOTD utilizes bSTats metrics plugin to collect basic stats about your server. No personal information is collected in this process. Metrics allows me as a developer to see what vresion of the plugin people are running, as well as server software itself to help determine where i need to focus my time. Additional information about metrics can be obtained here.
 
+<br />
 <p align="center">Bug Reports | Feature Requests</p>
-Many tests are performed by me to ensure functionaility is there before releasing, however sometimes bugs do slip through. Please report all bugs found on Github and i'll try and fix them as soon as possible. Feature requests can also be submitted at Github.
+Many tests are performed by me to ensure functionaility is there before releasing, however sometimes bugs do slip through. Please report all bugs and feature requests in the Issue tracker right here!
