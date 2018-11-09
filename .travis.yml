@@ -9,5 +9,3 @@ deploy:
   api_key: "68d3fad52526d0dc0003b6f71c9a98ea0d061fb2"
   file: "PingListMOTD.jar"
   skip_cleanup: true
-  on:
-    tags: true
