@@ -6,6 +6,6 @@ script: mvn clean package
 # deploy to github
 deploy:
   provider: releases
-  api_key: "$GITHUB_OAUTH_TOKEN"
+  api-key: "$GITHUB_OAUTH_TOKEN"
   file: "PingListMOTD.jar"
   skip_cleanup: true
