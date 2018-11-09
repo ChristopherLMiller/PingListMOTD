@@ -15,7 +15,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serverVersion>1.12.2-R0.1-SNAPSHOT</serverVersion>
+        <serverVersion>1.13.2-R0.1-SNAPSHOT</serverVersion>
     </properties>
 
     <repositories>
@@ -125,15 +125,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-      <snapshotRepository>
-        <id>nexus-snapshot</id>
-        <url>https://nexus.christopherleemiller.me/repository/maven-snapshots/</url>
-      </snapshotRepository>
-      <repository>
-        <id>nexus-releases</id>
-        <url>https://nexus.christopherleemiller.me/repository/maven-releases</url>
-      </repository>
-    </distributionManagement>
 </project>
