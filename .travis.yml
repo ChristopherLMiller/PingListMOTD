@@ -1,0 +1,22 @@
+#compile maven
+language: java
+sudo: false
+script: mvn clean package
+
+# deploy to github
+deploy:
+  provider: releases
+  github_token: $GITHUB_TOKEN
+  file: build/target/*.jar
+  skip_cleanup: true
+  on:
+    tags: true
+    
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
