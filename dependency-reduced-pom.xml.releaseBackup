@@ -8,13 +8,11 @@
   <description>Easy to configure ping list MOTD</description>
   <url>https://christopherleemiller.me</url>
   <scm>
-    <connection>scm:git:git://github.com/ChristopherLMiller/PingListMOTD.git</connection>
-    <developerConnection>scm:git:git@github.com:ChristopherLMiller/PingListMOTD.git</developerConnection>
-    <tag>${project.version}}</tag>
-    <url>https://github.com/ChristopherLMiller/PingListMOTD</url>
+    <connection>scm:git:https://github.com/ChristopherLMiller/PingListMOTD.git</connection>
+    <developerConnection>scm:git:https://github.com/ChristopherLMiller/PingListMOTD.git</developerConnection>
   </scm>
   <build>
-    <defaultGoal>package</defaultGoal>
+    <defaultGoal>clean package release:prepare</defaultGoal>
     <resources>
       <resource>
         <targetPath>.</targetPath>
