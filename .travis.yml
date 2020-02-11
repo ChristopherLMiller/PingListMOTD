@@ -1,7 +1,7 @@
 #compile maven
 language: java
 sudo: false
-script: mvn clean package
+script: mvn package release:prepare
 
 # deploy to github
 deploy:
