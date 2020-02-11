@@ -2,9 +2,7 @@
 
 <p align="center">
 
-<a href="https://travis-ci.org/ChristopherLMiller/PingListMOTD">
-<img src="https://travis-ci.org/ChristopherLMiller/PingListMOTD.svg?branch=master" alt="travis">
-</a>
+[![buddy pipeline](https://app.buddy.works/christopherleemiller/pinglistmotd/pipelines/pipeline/238685/badge.svg?token=32127fc1f6d5e7a4be5687051af18597a885f82b7f8636e0b1b80002f9a44230 "buddy pipeline")](https://app.buddy.works/christopherleemiller/pinglistmotd/pipelines/pipeline/238685) ![Version 2.2](https://img.shields.io/badge/Version-2.2-brightgreen)
 </p>
 
 <p align="center">Discord - Plugin Help: https://discord.gg/AVVhUXU</p>

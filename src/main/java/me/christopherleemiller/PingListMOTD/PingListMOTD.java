@@ -6,27 +6,32 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
-/**
- * Created by Chris on 3/15/14.
- */
 public class PingListMOTD extends JavaPlugin {
 	public String motd;
 	public String prefix = "[PingListMOTD] ";
-	public Logger log = Logger.getLogger("minecraft");
 
 	@Override
 	public void onEnable() {
+		// Load the config
 		loadConfig();
 
 		// enable metrics
 		Metrics metrics= new Metrics(this, 991);
-
 
 		// register the command executor
 		getCommand("pinglist").setExecutor(new PingListCommandExecutor(this));
 
 		// register the event listener
 		Bukkit.getPluginManager().registerEvents(new PingListListener(this), this);
+
+		// Check for updates to the plugin
+		new UpdateChecker(this, 42658).getVersion((version -> {
+			if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+				this.getLogger().info("No updates found");
+			} else {
+				this.getLogger().info("Update found");
+			}
+		}));
 	}
 
 	@Override
