@@ -19,7 +19,7 @@ public class PingListMOTD extends JavaPlugin {
 		loadConfig();
 
 		// enable metrics
-		Metrics metrics= new Metrics(this);
+		Metrics metrics= new Metrics(this, 991);
 
 
 		// register the command executor

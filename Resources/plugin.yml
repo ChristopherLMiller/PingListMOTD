@@ -2,6 +2,7 @@ name: ${name}
 description: ${description}
 version: ${project.version}
 main: me.christopherleemiller.PingListMOTD.PingListMOTD
+api-version: 1.15
 
 commands:
     pinglist:
