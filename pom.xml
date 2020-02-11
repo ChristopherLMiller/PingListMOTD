@@ -13,6 +13,11 @@
     <description>Easy to configure ping list MOTD</description>
     <packaging>jar</packaging>
 
+    <scm>
+        <connection>scm:git:https://github.com/ChristopherLMiller/PingListMOTD.git</connection>
+        <developerConnection>scm:git:https://github.com/ChristopherLMiller/PingListMOTD.git</developerConnection>
+    </scm>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serverVersion>1.15.2-R0.1-SNAPSHOT</serverVersion>
@@ -78,6 +83,38 @@
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
                 </configuration>
+            </plugin>
+
+            <!-- SCM -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-utils</artifactId>
+                        <version>2.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.2</version>
+                    </dependency>
+                </dependencies>
+                <version>1.0</version>
+                <configuration>
+                    <tag>${project.version}</tag>
+                    <connectionType>connection</connectionType>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>tag</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>tag</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <!-- JAR dependency addition plugin -->
